@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Meditation Place</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="nav-label"></label>
+            <ul>
+                <li><a href="#meditations">Meditations</a></li>
+                <li><a href="favourites.html">Favourites</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+            <div class="logo-container">
+                <svg class="logo" style="color: white" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                    <path id="heart" d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" fill="white"></path> 
+                </svg>                     
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="main-page">
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <h1 class="title-slide-heading">Meditation<span>Place.</span></h1>
+                        <p class="title-slide-line">&VerticalLine;</p>
+                        <p class="title-slide-desc">Choose your meditation session &RightArrow;</p>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="image-container-rain">
+                            <a href="rain.html"><img src="img/rain.gif" alt="Jungle rain"></a>
+                            <div class="swiper-slide-h1">
+                                <a href="rain.html">Rainy Jungle</a>
+                                <p>Relax and clear your mind with the soothing sound of rain.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                         <div class="image-container-ocean">
+                            <a href="ocean.html"><img src="img/ocean.gif" alt="Ocean waves"></a>
+                            <div class="swiper-slide-h1">
+                                <a href="ocean.html">Ocean Waves</a>
+                                <p>Let the sound of the ocean waves wash away your stress and tension.</p>
+                            </div>
+                         </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="image-container-birds">
+                            <a href="bird.html"><img src="img/birds.gif" alt="Birds flying"></a>
+                            <div class="swiper-slide-h1">
+                                <a href="bird.html">Bird's Song</a>
+                                <p>Connect with nature and find inner peace with the sounds of birds singing.</p>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- <div class="swiper-scrollbar"></div>  -->
+          
+            <!-- If we need navigation buttons -->
+            <!-- <div class="swiper-button-prev">
+                <img src="img/prev_arrow.svg" alt="Back slider button">
+            </div>
+            <div class="swiper-button-next">
+                <img src="img/next_arrow.svg" alt="Next slider button">
+            </div> -->
+        </div>
+    </main>
+
+    <div class="container" id="meditations">
+      <!-- <section id="rain-meditation">
+        <h2>Rainy Jungle</h2>
+        <p>Relax and clear your mind with the soothing sound of rain.</p>
+      </section> -->
+
+      <div class="card rain">
+        <h3>Rainy Jungle</h3>
+        <p>The Rainy Jungle meditation takes you on a soothing journey deep into the heart of a lush rainforest.
+             As you close your eyes and listen to the gentle patter of raindrops on leaves, you'll be transported to a serene oasis of tranquility.
+             Immerse yourself in the symphony of nature as you visualize the vibrant greenery, sparkling water droplets, and the rich aroma of the forest.</p>
+        <div class="pad-top"><a href="rain.html" class="button">Start Session</a></div>
+      </div>
+
+      <!-- <section id="ocean-meditation">
+        <h2>Ocean Waves</h2>
+        <p>Let the sound of the ocean waves wash away your stress and tension.</p>
+      </section> -->
+
+      <div class="card ocean">
+        <h3>Ocean Waves</h3>
+        <p>Take a moment to immerse yourself in the soothing world of ocean waves. Close your eyes and imagine standing on a serene beach, the soft sand beneath your feet. As you listen to the rhythmic ebb and flow of the waves, let your worries and stress dissolve with each gentle crash against the shore.</p>
+        <div class="pad-top"><a href="ocean.html" class="button">Start Session</a></div>
+      </div>
+
+      <!-- <section id="birds-meditation">
+        <h2>Bird's Song</h2>
+        <p>Connect with nature and find inner peace with the sounds of birds singing.</p>
+      </section> -->
+
+      <div class="card bird">
+        <h3>Bird's Song</h3>
+        <p>Immerse yourself fully in the present moment, surrendering to the beauty and serenity of the bird's song. Let it guide you to a place of stillness and inner calm. Imagine yourself merging with nature, becoming one with the birds and their music.</p>
+        <div class="pad-top"><a href="bird.html" class="button">Start Session</a></div>
+      </div>
+    </div>
+  <footer>
+    <p>&copy; 2023 Meditations</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

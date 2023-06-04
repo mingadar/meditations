@@ -1,0 +1,294 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #EBE4FF;
+    color: #fff;
+  }
+  
+  /** Navigation bar **/
+  nav {
+    background-color: #EBE4FF;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding: 20px;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: 400;
+    display: inline-block;
+    position: relative;
+    padding: 0 0 10px 0;
+  }
+  
+  nav a:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 0;
+    transition: width 0s ease;
+  }
+  
+  nav a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+    width: 0;
+    background: white;
+    transition: width .5s ease;
+  }
+  
+  nav a:hover:before {
+    width: 100%;
+    background: white;
+    transition: width .5s ease;
+  }
+  
+  nav a:hover:after {
+    width: 100%;
+    background: transparent;
+    transition: all 0s ease;
+  }
+  
+  .nav-toggle {
+    display: none;
+  }
+  
+  .nav-label {
+    display: none;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-page {
+    width: 100%;
+    height: 100vh;
+    background-color: #EBE4FF;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .heart-animation {
+    animation-name: heartbeat;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes heartbeat {
+    0% {
+      transform: scale(0.8);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.8);
+    }
+  }
+  
+  h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+  
+  audio {
+    width: 50%;
+    margin: 20px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
+    background-color: #EBE4FF;
+    margin: 40px 0 50px 0;
+  }
+
+  .card {
+    width: fit-content;
+    padding: 20px 50px 50px 50px;
+    border-radius: 1em;
+    position: relative;
+    transition: .3s all;
+    box-shadow: 5px 5px 5px 5px #bebcc5;
+    color: #fff;
+    margin-bottom: 40px;
+    margin-top: 50px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .rain {
+    background-image: url('../img/rainDark.gif');
+    background-size: cover;
+  }
+
+  .ocean {
+    background-image: url('../img/oceanDark.gif');
+    background-size: cover;
+  }
+
+  .bird {
+    background-image: url('../img/birdsDark.gif');
+    background-size: cover;
+  }
+
+  .card h2 {
+    margin-bottom: 50px;
+    margin-top: 20px;
+    padding-left: 7px;
+  }
+
+  .controls {
+    position: relative;
+    width: max-content;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10em;
+    padding: 0.2em
+  }
+
+  button {
+    margin: 10px 10px 10px 10px;
+    bottom: 30px;
+    font-size: 14px;
+    color: #000;
+    background: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 0;
+    padding: 25px 25px 25px 25px;
+    border-radius: 10em;
+    transition: .3s all;
+    cursor: pointer;
+  }
+
+  button:hover {
+    color: #fff;
+  }
+
+  .fav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .like {
+    width: 30px;
+    height: 30px;
+    margin: 38px 0px 0px 20px;
+    cursor: pointer;
+  }
+
+  .like svg path {
+    fill: none;
+  }
+
+  .like:hover path {
+    fill: red;
+  }
+
+  #timer {
+    font-size: 3em;
+    font-weight: bold;
+    border-radius: 50%;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+
+  /* Media queries for mobile devices */
+
+@media only screen and (max-width: 600px) {
+  /* Adjust styles for screens with a maximum width of 600px (mobile devices) */
+  
+  nav {
+    padding: 10px;
+  }
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .card {
+    padding: 10px;
+  }
+  
+  h2 {
+    font-size: 2em;
+  }
+  
+  audio {
+    width: 100%;
+    margin: 10px;
+  }
+  
+  .like {
+    margin: 10px;
+  }
+  
+  #timer {
+    width: 150px;
+    height: 150px;
+    font-size: 2em;
+  }
+}
+
+
+  

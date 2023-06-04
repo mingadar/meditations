@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bird's Song</title>
+  <link rel="stylesheet" href="css/meditation.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="nav-label"></label>
+            <ul>
+                <li><a href="index.html#meditations">Meditations</a></li>
+                <li><a href="favourites.html">Favourites</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+            <div class="logo-container">
+                <svg class="logo" style="color: white" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+                    <path id="heart" d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" fill="white"></path> 
+                </svg>                     
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="main-page">
+                <div class="container"> 
+                    <div class="card bird">
+                        <div class="fav">
+                            <h2>Bird's Song</h2>
+                            <svg id="like-svg" class="like" style="color: white" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 16 16">
+                                <path id="heart-id" d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" fill="white"></path> 
+                            </svg>        
+                        </div>
+                    
+                        <audio id="player" src="birds.mp3"></audio>
+                        <div class="controls">
+                            <button class="play" onclick="document.getElementById('player').play()">Play</button> 
+                            <button class="pause" onclick="document.getElementById('player').pause()">Pause</button> 
+                            <button class="volume-up" onclick="document.getElementById('player').volume += 0.1">Vol +</button> 
+                            <button class="volume-down" onclick="document.getElementById('player').volume -= 0.1">Vol -</button>
+                        </div>
+                    </div>
+                    <div id="timer">13:31</div>
+                </div>
+        </div>
+    </main>
+  <footer>
+    <p>&copy; 2023 Meditations</p>
+  </footer>
+  <script src="js/bird.js"></script>
+</body>
+</html>
